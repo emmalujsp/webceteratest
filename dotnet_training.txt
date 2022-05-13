@@ -1,0 +1,557 @@
+Network enabled technology
+-------------------------
+DOT->Intellisense feature
+Types of .Net APplication
+----
+console
+	Atm
+	Command prompt
+	No GUI
+Windows /standalone/desktop
+	MS office 
+	Tally
+	without internet we can work on this
+webapplication
+	websites
+	we need internet for this
+	Having GUI
+
+WEB API
+	Google map
+	weather
+
+.NET Components
+----------------
+*CLR -> Common language runtime
+*BCL -> Base class library
+
+ CLR
+------
+* code execution and detection
+* Memory management
+	! Allocating and deallocating
+	! Garabage collection (GC)
+* Cross language interoperability
+	(interop)
+
+ BCL (library)
+--------
+FCL -> Framework class library
+it specifies which framework you are working on and it specifies which application you are developing
+
+eg for BCL
+ 	using system
+	using system.io
+	using system.Data
+	using system.linq
+	using system.collections
+	using system.collection.generic
+
+	
+	WEB
+------------------
+C#.NET -> is a language
+ASP.NET -> Technology (Full form of ASP Active server pages)
+
+C#.NET
+MVC -> model view controller
+
+  .NET - Code Execution
+---------------------------
+.NET languages (C#, J#, F#, VB.NET)
+
+C#	J#	F#	VB.NET
+	.NET Compiler(Common compiler for all .net language)
+
+	MSIL (IL code)(microsoft intermediate language)  
+			(It will create .exe/.dll)
+			 .DLL                   |     .EXE
+			------------------------------------------
+			Dynamic link lib	| executable file
+			functions and method	| void main is there
+			Dependent file		| independent
+			will not get the output | Will get the ouput
+						| exe file can any number of library
+
+	
+	CLR (it has two more components cls and cts)
+				(Common type system and common language sepcification)
+				(these two components involved in code detection)
+				(Common type system is for data types for all languages)
+				(CLS is for define class, interface, object etc)
+		(Incase there is a mismatch it will enable clr debugger and give the error)
+	JIT (Just in time)
+		(Conert low level code into original source code)
+	
+	source code
+	
+	expected output
+
+
+	
+  "DLL HELL"
+--------------
+Earlier when the same library given for different app in same system then there is a chance of conflict
+
+
+
+CONTROL STATEMENTS
+-------------------
+1. Conditional
+	ifelse
+	switch(int/char/string)
+
+2. Iterational control statement
+	while
+	do-while
+	for
+		1.intialisation
+		2.test condition
+		3. inc/decre
+
+	for-each
+
+	ARRAY
+-----------------------------
+collection of elements of same kind/type or collection of homogenous elements.
+group of data of same datatype.
+
+1. single dimensional array
+2. two dimensional array
+
+
+object array--> declared using object keyword. object is a hetrogenous array.
+jagged array--> Array inside another array.
+
+
+TRYPARSE
+----------------
+we use this when we try to fetch data from database. possibility of storing integer vale in string coloumn then
+we use the tryparse to parse that string into intege. this will return a boolean value so there no formate error occurre
+
+
+ENUM (enumerated datatype)
+---------------------------
+it is called set of named integer constants
+____________________________________________________________________________________________________________________
+
+
+
+	OBJECT ORIENTED PROGRAMMING
+_______________________________________________
+-----------------------------------------------
+
+-> classes
+-> constructor and destructor
+-> Inheritance
+	-single,multiple,multilevel,heirarchial,hybrid
+	-interface
+
+-> Polymorphism
+	1. compile-time
+	2.Runtime
+
+CLASS
+-------
+
+=>collection of datamember/business entites and member functions.
+=>Access modifier/specifier
+	private,protected,public
+	by default datamembers(varibales) are private
+
+
+This varibale is used to access all the members of the class
+
+
+Array of Objects
+-----------------
+
+CONSTRUCTOR and DESTRUCTOR
+---------------------------
+->It is special member of class, which is used to initialise the data-memebers
+->constructor name is same as class name
+->constructor can take parameter
+
+Parameterised constructor is we can pass parameter
+
+
+DESTRUCTOR 
+->it is memeber of class which is used to deallocate the memory space used by objects.
+->destructor name is same as class name,preceeded byt tild(~) operator
+->destructor cannot be parameterised.
+
+
+is and as operator
+---------------------
+is operator:
+-> is operator is used to check the runtime type of an object is compatiable with given type or not.
+->is operator return a boolean value.
+->is operator is used only for reference type.
+
+as operator:
+->it is used to perform conversion between compatiable types.
+
+
+Nullable or ?
+---------------------
+  Nullable<int> x = null;
+            int? y = 124;
+
+CONVERSION
+------------
+int.parse
+int.tryparse
+Convert.ToInt32
+
+
+Boxing and Unboxing
+---------------------
+Boxing:
+->conversion from value type to object/reference type (implicit conversion)
+
+
+
+STRING FUNCTIONS
+------------------
+
+
+equals
+-----------
+ ->function
+ -> check the value
+
+==
+-----
+-> operator
+-> check the meomry locaton
+
+
+value types and reference type
+-------------------------------
+value type=>
+int
+double
+char
+string enum
+structure
+	->structure is a value type
+	->default constructor not allowed parameterised constructor is allowed
+- data is stored in stack
+-holds data within its own memory
+
+reference type=>
+array
+stringbuilder 
+interface 
+indexer
+properties
+class
+	->class is a value type
+- uses heap memory
+- contains a pointer to another memory location,this memory location hold the data
+
+
+
+string and stringbuilder
+-------------------------
+string:
+	->strings in c# is immutable(cannot be changed)
+	->if a string is used as constands
+
+stringbuilder:
+	->stringbuilder in c# is mutable(can be changed)
+	->ifa string requires modification, then we use stringbuilder
+
+STATIC
+-----------
+	Static and non static variable=>
+	static and non-static methods=>
+		-no instance creation is required to call static method
+	static and non-static constructor=>
+
+INHERITANCE AND TYPES
+-------------------------------
+-Single
+-Multiple (not supported in Dotnet. implmented using interface)
+-Multilevel
+-Heirarchil
+-HYbrid
+
+Interface
+-----------
+-> group/collection of abstract methods
+->varibale declaration is not allowed in interface
+-> methods/function of interface are public
+->All methods of interface should be implemented
+
+	abstract method : Methods
+	Concrete method : Methods with definition are reffered as concrete
+
+Polymorphism
+-----------------
+poly - multiple
+morphism - multiple/behaviours
+->Compile-time -funtion overloading,static,early binding
+->Runtime -function overiding,dynamic,late binding
+
+
+PARAMETERS
+----------------------
+->reference parameter
+	Function passed with reference keyword also should delcared with reference keyword
+->out parameter
+	used to return more than one value from a function
+->params keyword
+	can pass any number of paramaters
+->named Parameter
+	it will help to change the order of parameter passing
+
+
+
+TYPES OF CLASS
+--------------------
+1) Abstract class
+	interface			 |	abstract class
+	-----------------------------------------------
+	collection of abstract method    | collection of absract and non abstarct methds
+	variables are  not allowed       | varibales are allowed
+	interface is implemented in class| abstract class is inherited
+
+	->Abstract class cannot be instatiated,but it can be inherited
+2) Sealed Class
+	-> sealed class can be instantiated,but it cannot be inherited.
+3)static class
+	->static class neither instantiated nor inherited
+4)Partial class
+	->partial class is used to split the development task across multiple developers
+	partial methods
+	----------------
+	-partial method only included in partial class
+	-partial method prototype must declared in another partial class in the begining
+
+
+PROPERTIES AND INDEXER
+------------------------
+Properties provides access to private datamembers in a class
+Types of properties:
+	Readonly property :- Properties having only get method. we cannot set the values.
+	Writeonly property :- Properties having only set  method.
+
+Indexer 
+when we having member as an arrayy they we use indexer
+Indexer does not have name
+
+
+Other Namespaces
+----------------------
+
+using System.Collections;
+->non-collection classes are not "type-safe"
+	ArrayList
+		ArrayList is dynamic array.
+	Hashtable
+		uses "hashing" method fordata-storage
+		data is stored in key-value pair format
+		key's of hashtable should unique/cannot duplicated.
+		Store the the randomly
+	SortedList
+		Here it will store the data in sorted order
+	Stack
+		Last in first out
+	queue
+		First in First out
+
+
+using System.Collections.Generic;
+->Generic-Collection classes are "type-safe"
+	List<int>
+	Dictionary<>
+	SortedDictionary<>
+	Hashset<int>
+	Stack<>
+	queue<>
+
+	Generic class
+
+
+IComparable
+------------------
+Icomparer
+-------------
+	when we don't have access to class we use Icomparer
+
+
+FileHandling
+--------------
+create/open/read/write/append
+filestream
+File
+FIleInfo
+DirectoryInfo
+Streamwriter and streamreader
+
+Serialisation
+---------------
+xml
+binary
+datacontractjson
+_______________________________________________________________________________________________________________________
+-----------------------------------------------------------------------------------------------------------------------
+FILE HAANDLING IN C#:
+---------------------------------
+usingnSysytem.IO;
+INPUT-> create,write,append
+OUTPUT-> open,read
+
+FIle Handling Classes
+-----------------------
+File
+FIlestream
+streamwriter and  streamreader
+FileInfo
+
+
+Serialisation
+---------------------------------
+method of converting object into bytes.
+
+De-Serialisation
+---------------------------------
+method of converting bytes into object.
+
+Types of Serialisation:-
+	1. Deep-serialisation(private,protected,public)
+		-Binary
+		-soap
+		-datacontractjson
+	
+	2. Shallow-serialisation
+		-xml(public)
+	
+xml-Serialization
+->Extensile markup language.
+->xml is one of the text-based standared for data representation.
+
+<?xml version="1.0">
+<Employee>
+<eid>1</eid>
+<ename>Joseph</ename>
+<edesig>S/W ENGG</edesig>
+</Employee>
+
+json-Serialization
+JSON:javascript object notation.
+->json is "text-based" std for storing data and data-transfer.
+->json format stores the data in key-value pair.
+->json data is platform and OS independent.
+
+[
+{eid:1,ename:"john",edesig:"TL"},
+{eid:2,ename:"jose",edesig:"TM"}
+]
+
+
+Exception Handling
+--------------------------
+Errors:
+1. Compile-time
+	->wrong logic,syntax,improper datatype conversions.
+2. Run-time
+	errors which ccurs during runtime can be handled by "Exception handling blocks"
+
+keywords for exception handling:-
+try,catch,throw,finally
+
+
+
+Delegates
+---------------------------
+->function pointer
+->delegate can call many functions
+->delegate signature should match with function signatre.
+->are used to handling events
+->are used to define anonymus methods
+
+Multi-cast Delegate
+-----------------------
+
+Generic Delegates
+-----------------------
+3 types Generic Delegates
+	func<>
+		func delegate: takes upto 16 input parameter and returns a single value
+	action<>
+		action delegate:  takes upto 16 input parameter and it does not returns the value
+	predicate<>
+		predicate delegate: method with string as input and returns bool value
+
+Anonymus types
+------------------------
+->Anonymus means "no name"
+->Variable without datatype.
+->declared using var and new
+
+int,string,double -->compile-time-checking
+dynamic->run-time- checking
+
+Anonymus methods
+----------------------
+->method without name is reffered as  "Anonymus methods"
+->Anonymus methods are implemented by using delegate.
+
+extension method
+----------------------
+
+New Library
+-----------------
+solution explorer-> add new project -> select librar from drop down->class library
+once coding done right click on class library and click build
+after building library right click on the dependency->add project reference
+
+
+
+Multithreading
+-------------------------
+
+using System.Threading;
+
+thread->independent execution path.
+thread allows the execution of application logic.
+
+Multithreading helps in parallel/concurrent execution
+
+Thread--> class
+Threadstart -->delegate
+
+
+thread synchronisation
+--------------------------------
+
+->synchronisation allows only thread to use the resource for particular peroid of time.
+->other threads are not allowed to interrupt until the assigned task is completed by thread.
+->thread synchronisation is acheived by "locks"
+
+
+
+Thread Pool
+----------------------------
+
+Thread Pool is automated approach for multithreading.
+Thread Pool is set of pre-configured threads which are alive and ready to handle incoming request.
+once if the request is completed by thread,thread will return back to thread-pool.
+Thread Pooling improves the performance of application.
+
+
+Task library in c#
+-------------------------
+-->asynchronous programming.
+
+using System.Threading.Tasks;
+
+
+Dependancy Injection 
+-------------------------
+tightly coupled
+
+Loosely coupled code:(interface)
+	an interface is injected to contructor of class then it is called and dependancy injection

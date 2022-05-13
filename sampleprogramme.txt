@@ -1,0 +1,4310 @@
+ double a, b, c, sum, average, area, s, radius, carea;
+                Console.WriteLine("Enter First number");
+                a = double.Parse(Console.ReadLine()); //input method
+                Console.WriteLine("Enter Second number");
+                b = double.Parse(Console.ReadLine());
+                Console.WriteLine("Enter Third number");
+                c = double.Parse(Console.ReadLine());
+
+                sum = a + b + c;
+                average = sum / 3;
+                Console.WriteLine("sum  of two number = " + sum);
+                Console.WriteLine("sum of {0},{1},{2} is {3}", a, b, c, sum);
+                Console.WriteLine("average is {0}", average);
+
+
+                //WAP to find area of triangle
+                //S=(A+B+C)/2
+                //AREA=SQRT(S(S-A)(S-B)(S-C))
+
+                s = (a + b + c) / 2;
+                area = Math.Sqrt(s * (s - a) * (s - b) * (s - c));
+                Console.WriteLine("Area of the triangle = " + area);
+
+                //Area of the circle
+                //3.14*r*r
+                Console.WriteLine("Enter Radius");
+                radius = double.Parse(Console.ReadLine());
+                carea = 3.14 * Math.Pow(radius, 2);
+                Console.WriteLine("Area of circle " + carea);
+
+
+
+  int a, b, c;
+            Console.WriteLine("Enter three numbers ");
+            a = int.Parse(Console.ReadLine());
+            b = int.Parse(Console.ReadLine());
+            c = int.Parse(Console.ReadLine());
+            if(a>b && a>c)
+            {
+                Console.WriteLine("{0} greater than {1} and {2}",a,b,c);
+            }
+           else if(b>a && b>c)
+            {
+                Console.WriteLine("{0} greater than {1},{2}",b,a,c);
+            }
+            else
+            {
+                Console.WriteLine("{0} is greater than {1},{2}",c,a,b);
+            }
+
+
+  //WAP to read marks in 4 subjects find the total,average and grades
+            /*
+            0-34 D
+            35-49 C
+            50-59 B
+            60-79 A
+            80-100 A+
+            */
+            double mark1, mark2, mark3, mark4, sum, average;
+            string grade;
+            Console.WriteLine("Enter Four marks(0 to 100)");
+            mark1=double.Parse(Console.ReadLine());
+            mark2=double.Parse(Console.ReadLine()); 
+            mark3=double.Parse(Console.ReadLine()); 
+            mark4=double.Parse(Console.ReadLine());
+
+            sum = mark1 + mark2 + mark3 + mark4;
+            average = sum / 4;
+
+            if(average>0 && average<=34)
+            {
+                grade = "D";
+            }
+            else if(average>34 && average<=49)
+            {
+                grade = "C";
+            }
+            else if(average>49 && average<=59)
+            {
+                grade = "B";
+            }
+            else if(average>59 && average<=69)
+            {
+                grade = "A";
+            }
+            else
+            {
+                grade = "A+";
+            }
+            Console.WriteLine("AVerage Mark is " + average);
+            Console.WriteLine("Grade is " + grade);
+
+
+
+//WAP to find given character is vowel or not
+            char ch;
+            Console.WriteLine("Enter a character ");
+            ch = char.Parse(Console.ReadLine());
+            if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u' || ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U' )
+            {
+                Console.WriteLine("Input char is vowel " + ch);
+            }
+         
+            else
+            {
+                Console.WriteLine("input char is consonant =" + ch);
+            }
+
+
+
+
+string choice;
+            Console.WriteLine("Enter your choice(one/two/three)");
+            choice = Console.ReadLine();
+
+            switch(choice)
+            {
+                case "one":
+                    Console.WriteLine("C#.NET,F#.NET");
+                    break;
+                case "two":
+                    Console.WriteLine("ASP.NET,MVC");
+                    break;
+                case "three":
+                    Console.WriteLine("SQL SERVER,ORACLE");
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice");
+                    break;
+
+            }
+          
+
+
+            //WAP using switch case to find area of rectangle triangle
+            char choice;
+            int num1=0, num2=0;
+            Console.WriteLine("1. Area of the rectangle\n2. Area of the Triangle \n Enter your choice");
+            choice =char.Parse( Console.ReadLine());
+            if(choice=='1' || choice=='2')
+            {
+                Console.WriteLine("Ener 2 dimension");
+                num1 = int.Parse(Console.ReadLine());
+                num2 = int.Parse(Console.ReadLine());
+            }
+          
+            switch(choice)
+            {
+                case '1':
+                    Console.WriteLine("Area of the rectangle"+(num1*num2));
+                    break;
+                case '2':
+                    int x = num1 * num2;
+                    Console.WriteLine("Area of the triangle"+(x/2));
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice");
+                    break;
+
+            }
+
+
+//WAP to display all even numbers between 1 to 25
+            int x = 0;
+            do
+            {
+                if(x%2 ==0)
+                {
+                    Console.WriteLine(x);
+                }
+                x++;
+            } while (x <= 25);
+
+ //WAP to display multiplication table of any number
+            int n;
+            Console.WriteLine("Enter a number");
+            n=int.Parse(Console.ReadLine());
+            for(int i=1;i<=10 ;i++)
+            {
+               Console.WriteLine("{0}*{1}={2}",n,i,n*i);
+            } 
+
+
+ //Array
+            int []a= new int[5] { 0, 3, 5, 8, 10 };
+            int[] b = new int[] { 10, 20, 30 };
+            int[] c = new int[10];
+	    int[] array = new int[] {};
+            
+             
+            for(int i=0;i<a.Length;i++)
+            {
+                Console.WriteLine("a[{0}]={1}",i,a[i]);
+            }
+            foreach(int elements in b)
+            {
+                Console.WriteLine( elements);
+            }
+
+
+//Array
+            int[] array = new int[5];
+            Console.WriteLine("Enter the array element");
+            for(int i = 0; i < array.Length; i++)
+            {
+                array[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("The array elements are");
+            for (int i=0;i<array.Length;i++)
+            {
+                Console.WriteLine("a[{0}]={1}",i,array[i]);
+            }
+
+
+
+//Two dimensional Array
+            int[,] a = new int[2,2];
+            int[,] b = new int[,] { { 10, 20 }, { 30,40} };
+         
+
+            
+            for(int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    Console.Write("b[{0},{1}]={2}",i,j,b[i,j]+"\t");
+                }
+                Console.WriteLine();
+                
+            }
+
+
+//Two dimensional Array
+            int[,] a = new int[2,2];
+            int[,] b = new int[,] { { 10, 20 }, { 30,40} };
+          
+
+            Console.WriteLine("Enter the array element for a");
+            for(int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                   a[i,j]=int.Parse(Console.ReadLine());
+                }
+                
+            }
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    Console.Write("b[{0},{1}]={2}", i, j, b[i, j] + "\t");
+                }
+                Console.WriteLine();
+
+            }
+
+//WAP to add 2 matrices 3x3
+            int[,] a = new int[3,3];
+            int[,] b = new int[3, 3];
+            int[,] sum = new int[3, 3];
+
+            Console.WriteLine("Enter the array element for a");
+            for(int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                   a[i,j]=int.Parse(Console.ReadLine());
+                }
+                
+            }
+
+            Console.WriteLine("Enter the array element for b");
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    b[i, j] = int.Parse(Console.ReadLine());
+                }
+
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    sum[i, j] = a[i, j] + b[i, j];
+                }
+
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write("sum[{0},{1}]={2}", i, j, sum[i, j] + "\t");
+                }
+                Console.WriteLine();
+
+            }
+
+
+//object array
+            object[] bookdetails = new object[] {1, "C#_pro",3400.56,2,"SQL",2800.90};
+            Console.WriteLine("The book details");
+            foreach(object i in bookdetails)
+            {
+                Console.WriteLine(i);
+            }
+
+
+  //Jagged array
+            int[][] jarray = new int[3][];
+            
+            jarray[0] = new int[] { 10, 20, 30 };
+            jarray[1] = new int[] { 5,10,15,20,25 };
+            jarray[2] = new int[] { 2, 6, 9, 12, 15, 18, 21 };
+
+            Console.WriteLine("The jagged array is");
+            for(int i=0;i<jarray.Length;i++)
+            {
+                for(int j=0;j<jarray[i].Length;j++)
+                {
+                    Console.Write(jarray[i][j]+"\t");
+                }
+                Console.WriteLine();
+            }
+
+
+
+
+ //object Jagged array
+            object[][] jarray = new object[3][];
+            
+            jarray[0] = new object[] { 1, 2, 3 };
+            jarray[1] = new object[] { "Printer","Projector","keyboard" };
+            jarray[2] = new object[] {15000,120000,700 };
+
+            Console.WriteLine("The jagged array is");
+            for(int i=0;i<jarray.Length;i++)
+            {
+                for(int j=0;j<jarray[i].Length;j++)
+                {
+                    Console.Write(jarray[i][j]+"\t");
+                }
+                Console.WriteLine();
+            }   
+
+
+//WAP to store bid,bname,auname,price in jagged array and display
+            object[][] jarray = new object[4][];
+            
+            jarray[0] = new object[] { 1, 2, 3,4,5 };
+            jarray[1] = new object[] { "C# Fundamentals","HTML CSS","SQL DATABASE","JAVA FUNDAMENTALS","JQUERY" };
+            jarray[2] = new object[] {"Veeresh","Nanndhish","AJinesh","Emmalu","Jospeh" };
+            jarray[3] = new object[] { 1500.56, 2500, 5566, 1300, 3000 };
+
+            Console.WriteLine("The jagged array is");
+            for(int i=0;i<jarray.Length;i++)
+            {
+                for(int j=0;j<jarray[i].Length;j++)
+                {
+                    Console.Write(jarray[i][j]+"\t");
+                }
+                Console.WriteLine();
+            }   
+
+
+//TRYPARSE
+            string x = "Hello";
+            int res;
+            bool result=int.TryParse(x, out res);
+
+            Console.WriteLine(res);
+            Console.WriteLine(result);
+
+            string y = "Hello";
+            int res1=int.Parse(y);
+            Console.WriteLine(res1);
+
+
+ //enum
+        enum color { red=245,blue,green=560,gray}
+        static void Main(String[] args)
+        {
+            Console.WriteLine((int)color.blue);
+            Console.WriteLine((int)color.green);
+        }
+
+
+
+//object oriented programming
+namespace MYAPPONE
+{
+    class product
+    {
+        int pid;
+        string pname;
+        public double price;
+        public void getdata()
+        {
+            Console.WriteLine("Enter id, name and price of the product");
+            pid=int.Parse(Console.ReadLine());
+            pname=Console.ReadLine();
+            price=double.Parse(Console.ReadLine());
+        }
+        public void display()
+        {
+            Console.WriteLine("pid={0} pname={1} price={2}", pid, pname, price);
+
+        }
+    }
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            product obj=new product();  
+            obj.getdata();
+            obj.display();
+
+            product obj1 = new product();
+            obj1.getdata();
+            obj1.display();
+
+            Console.WriteLine("Total price = "+ (obj.price+obj1.price));
+        }
+    }
+}
+
+
+
+
+    //This keyword and function with parameter
+    
+    class product
+    {
+        int eid;
+        string ename;
+        string edesig;
+        public double esalary;
+        public void getdata(int eid,string ename,string edesig,double esalary)
+        {
+
+            this.eid = eid;
+            this.ename = ename;
+            this.edesig = edesig;
+            this.esalary = esalary;
+        }
+        public void display()
+        {
+            Console.WriteLine("eid={0} name={1} designation={2} salary={3}", eid, ename,edesig, esalary);
+
+        }
+    }
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            product obj=new product();  
+            obj.getdata(1,"Emmalu","ENgineer",50000);
+            obj.display();
+
+            product obj1 = new product();
+            obj1.getdata(2,"Joseph","ENgineer",40000);
+            obj1.display();
+
+           
+
+            Console.WriteLine("Total price = "+ (obj.esalary+obj1.esalary));
+        }
+    }
+
+
+ //function with parameter and return type
+  //Ternary operator
+    
+    class demo
+    {
+        int num1, num2;
+        public void getdata(int num1, int num2)
+        {
+
+            this.num1 = num1;
+            this.num2 = num2;
+      
+        }
+        public int check()
+        {
+            //if (num1 > num2)
+            //    return num1;
+            //else
+            //    return num2;
+            return (num1 > num2 ? num1 : num2);//ternary operator
+        }
+    }
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            demo d=new demo();
+            d.getdata(100, 200);
+            int result=d.check();
+            Console.WriteLine(result);
+
+        }
+    }
+
+
+
+//Array of objects
+    
+    class customer
+    {
+        int cid;
+        string cname;
+        public void getdata()
+        {
+
+            Console.WriteLine("Enter customer id");
+            cid = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter customer name");
+            cname = Console.ReadLine();
+
+        }
+      
+        public void display()
+        {
+            Console.WriteLine("cid={0},cname={1}",cid,cname);
+        }
+    }
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            customer[] cobj=new customer[2];
+            for(int i=0;i<cobj.Length;i++)
+            {
+                cobj[i]=new customer();
+                cobj[i].getdata();
+                cobj[i].display();
+            }
+
+        }
+    }
+
+
+ //Constructor and destructor
+    
+    class customer
+    {
+        int cid;
+        string cname;
+        string caddress;
+        
+        public customer() //constructor
+        {
+            cid = 1;
+            cname = "Joseph";
+            caddress = "Kottayam";
+        }
+        
+        public customer(int cid,string cname,string caddress) //paramterised constructor
+        {
+            this.cid = cid;
+            this.cname = cname;
+            this.caddress = caddress;
+        }
+
+        public customer(customer cobj) //copy constructor
+        {
+            this.cid=cobj.cid;
+            this.cname=cobj.cname; 
+            this.caddress=cobj.caddress;
+        }
+       
+        public void display()
+        {
+            Console.WriteLine("cid={0},cname={1},caddress={2}",cid,cname,caddress);
+        }
+        ~customer()//destructor
+        {
+          
+        }
+    }
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            customer cobj = new customer();
+            cobj.display();
+            customer cobj1=new customer(1,"Emmalu","Kottayam");
+            cobj1.display();
+            customer cobj2=new customer(cobj);
+            cobj2.display();
+           
+        }
+    }
+
+
+//is operator
+    
+    class customer
+    {
+        
+    }
+    class sales
+    {
+
+    }
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            customer cobj = new customer();
+            sales sobj= new sales();
+
+            Console.WriteLine(cobj is customer);
+            Console.WriteLine(sobj is sales);
+            Console.WriteLine(cobj is sales);
+            Console.WriteLine(sobj is customer);
+            Console.WriteLine(sobj is object);
+            Console.WriteLine(cobj is object);
+        }
+    }
+
+ //as operator
+    
+    class customer
+    {
+        
+    }
+    class sales
+    {
+
+    }
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            object[] data = new object[5];
+
+            data[0] =   new customer();
+            data[1] = new sales();
+            data[2] = 120;
+            data[3] = "Welcome";
+            data[4] = true;
+
+            for(int i = 0; i < data.Length; i++)
+            {
+                string result = data[i] as string;
+                if (result != null)
+                    Console.WriteLine(result);
+                else
+                    Console.WriteLine("not a string");
+            }
+        }
+    }
+
+
+
+//Nullable value
+    
+    
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            Nullable<int> x = null;
+            int? y = 124;
+            int? z = null;
+
+
+            Console.WriteLine(x+ ", "+y+", "+z);
+
+            Console.WriteLine(x.HasValue);
+            Console.WriteLine(y.HasValue);
+            Console.WriteLine(z.HasValue);
+
+            Console.WriteLine(x.GetValueOrDefault());
+            Console.WriteLine(y.GetValueOrDefault());
+            Console.WriteLine(z.GetValueOrDefault());
+        }
+    }
+
+
+//Conversion
+    
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            int a, b;
+
+            Console.WriteLine("Enter 2 num");
+            a = Convert.ToInt32(Console.ReadLine());
+            b = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Product =" + (a * b));
+
+            bool var1 = false;
+            int result= Convert.ToInt32(var1);
+            Console.WriteLine(result);
+        }
+    }
+
+
+
+//Boxing and unboxing
+    
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            int x = 500;
+            object obj = x; //boxing implicit conversion
+
+            Console.WriteLine(obj);
+
+            int result = (int)obj; //explicit conersion,unboxing
+            Console.WriteLine(result);
+        }
+    }
+
+
+  
+//String  FUnction
+    
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            string data = "this is c# programming";
+
+            Console.WriteLine("Length of string is ="+data.Length);
+
+            Console.WriteLine("Index is=" + data.IndexOf('i'));
+
+            Console.WriteLine("Inde of last i =" + data.LastIndexOf('i'));
+
+            string s1 = data.Remove(10);
+            Console.WriteLine(s1);
+
+            string s2 = "It is interesting";
+
+            Console.WriteLine(string.Concat(s1, s2));
+
+            Console.WriteLine(data.Substring(5,2));
+
+            Console.WriteLine(data.StartsWith('t'));
+            Console.WriteLine(data.StartsWith("this"));
+
+            Console.WriteLine(data.EndsWith('g'));
+            Console.WriteLine(data.EndsWith("ing"));
+
+            Console.WriteLine(data.Replace('c', 'j'));
+            Console.WriteLine(data.Replace("c#", "VB.net"));
+
+            string s3 = "hello";
+            string s4 = "hai";
+            Console.WriteLine(s3.CompareTo(s4)); //s3<s4 -1 s3==s4 0  s3>s2 1
+
+
+            //copy and clone
+
+            string result = (string)s1.Clone(); //return the reference
+            Console.WriteLine(result);
+
+            string result1 = string.Copy(s1);  //refers to the variable
+            Console.WriteLine(result1);
+
+            char[] ch = new char[30];
+
+            //data.CopyTo(0,ch,0,data.Length);
+            data.CopyTo(8, ch, 0, 14);
+
+            foreach (char c in ch)
+            {
+                Console.WriteLine(c);
+            }
+
+            //split
+            string[] result3 = data.Split(' ');
+            foreach(string s in result3)
+            {
+                Console.WriteLine(s);
+            }
+
+            //Enumerator
+            CharEnumerator ch1= data.GetEnumerator();
+            while(ch1.MoveNext())
+            {
+                Console.WriteLine(ch1.Current);
+            }
+
+            //Insert string
+            string result4 = data.Insert(9, "-");
+            Console.WriteLine(result4);
+
+            //join
+            string[] array1 = new string[] { "this", "is", "c#", "application" };
+            string result5 = string.Join('-', array1);
+            Console.WriteLine(result5);
+
+            char[] ch2 =data.ToCharArray();
+            foreach (char c in ch2) 
+            {
+                Console.WriteLine(c);
+            }
+
+        }
+    }
+
+
+  //equals ==
+    
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            String str1 = "csharp";
+            string str2 = "csharp";
+
+            Console.WriteLine(str1.Equals(str2));
+
+            Console.WriteLine(str1 == str2);
+
+            string s1 = "csharp";
+
+            char[] ch = { 'c', 's', 'h', 'a', 'r', 'p' };
+
+            object s2= new string(ch);
+
+            Console.WriteLine(s1.Equals(s2));
+
+            Console.WriteLine(s1==s2);
+
+        }
+    }
+
+
+
+ //structure
+
+    struct category
+    {
+        public int cid;
+        public string cname;
+        public string cdesc;
+
+        public category(int cid, string cname,string cdesc)
+        {
+            this.cid = cid;
+            this.cname = cname;
+            this.cdesc = cdesc;
+        }
+    }
+    
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            category cobj;
+            cobj.cid = 1;
+            cobj.cname = "stationary";
+            cobj.cdesc = "all types of stationary intems";
+
+            category cobj2 = new category(2, "electronic", "electronics items");
+
+            Console.WriteLine(cobj.cid+"  "+cobj.cname+"  "+cobj.cdesc);
+
+
+            Console.WriteLine(cobj2.cid + "  " + cobj2.cname + "  " + cobj2.cdesc);
+
+        }
+    }
+
+ //string and stringbuilder
+
+  class demo
+    {
+        public void function1(string param1)
+        {
+            string.Concat(param1, " Programming");
+            Console.WriteLine(param1);
+        }
+
+        public void fucntion2(StringBuilder param2)
+        {
+            param2.Append(" Technology");
+            Console.WriteLine(param2);
+        }
+    }
+    
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            demo obj=new demo();
+
+            string param1 = "C#";
+            StringBuilder param2 = new StringBuilder("AJAX");
+
+            obj.function1(param1);
+            obj.fucntion2(param2);
+         
+
+        }
+    }
+
+
+ //static method
+
+  class Example
+    {
+        public void display()
+        {
+            Console.WriteLine("non-static method");
+        }
+        public static void print()
+        {
+           Console.WriteLine("static mathod");
+        }
+    }
+    
+    class Program
+    {
+        static void Main(String[] args)
+        {
+          
+            Example obj1= new Example();
+            obj1.display();
+
+            Example obj2= new Example();
+            obj2.display();
+
+            Example.print();
+         
+
+        }
+    }
+
+
+
+ //static variable and static constructor
+
+  class Example
+    {
+        int radius;
+        static double pi;
+
+        public Example (int radius)
+        {
+            this.radius = radius;
+        }
+
+        static Example()
+        {
+            Example.pi = 3.14;
+        }
+        public double compute()
+        {
+            return (Example.pi * this.radius * this.radius);
+        }
+        
+    }
+    
+    class Program
+    {
+        static void Main(String[] args)
+        {
+          
+            Example obj1= new Example(5);
+            Console.WriteLine("Area of the circle ="+obj1.compute());
+
+            Example obj2= new Example(15);
+            Console.WriteLine("Area of the circle =" + obj2.compute());
+
+
+
+
+        }
+    }
+
+
+ //single inheritance
+   class sample1 //base class
+    {
+        protected int x,y;
+
+        public void getxy()
+        {
+            Console.WriteLine("Enter two number ");
+            x = Convert.ToInt32(Console.ReadLine());
+            y = Convert.ToInt32(Console.ReadLine());
+        }
+
+    }
+    class sample2: sample1 //derived class
+    {
+        int result;
+        public void calculate()
+        {
+            result = x * y;
+            Console.WriteLine("Product of two nos =" + result);
+        }
+    }
+  
+    class Program
+    {
+        static void Main(String[] args)
+        {
+
+            sample2 obj = new sample2();
+            obj.getxy();
+            obj.calculate();
+
+        }
+    }
+
+//multilevel inheritance
+   class sample1 //base class
+    {
+        protected int x,y;
+
+        public void getxy()
+        {
+            Console.WriteLine("Enter two number ");
+            x = Convert.ToInt32(Console.ReadLine());
+            y = Convert.ToInt32(Console.ReadLine());
+        }
+
+    }
+    class sample2: sample1 //derived class
+    {
+        protected int p, q;
+
+        public void compute()
+        {
+            Console.WriteLine("Sum of 2 nos = " + (x + y));
+        }
+        public void getpq()
+        {
+            Console.WriteLine("Enter two number ");
+            p = Convert.ToInt32(Console.ReadLine());
+            q = Convert.ToInt32(Console.ReadLine());
+        }
+    }
+    class sample3:sample2 //derived class 2
+    {
+        public void calculate()
+        {
+            Console.WriteLine("Sum of all numbers " + (x + y + p + q));
+        }
+    }
+  
+    class Program
+    {
+        static void Main(String[] args)
+        {
+
+            sample3 obj = new sample3();
+            obj.getxy();
+            obj.compute();
+            obj.getpq();
+            obj.calculate();
+
+        }
+    }
+
+
+//multilevel inheritance
+   class Student //base class
+    {
+        protected int regno;
+        protected string name;
+
+       public Student()
+        {
+            Console.Write("ENter reg number :");
+            regno = int.Parse(Console.ReadLine());
+            Console.Write("ENter name :");
+            name = Console.ReadLine();
+        }
+
+    }
+    class MarkDet: Student //derived class
+    {
+        protected int M1,M2,M3;
+
+        public MarkDet()
+        {
+            Console.Write("ENter Three marks :");
+            M1 = int.Parse(Console.ReadLine());
+            M2 = int.Parse(Console.ReadLine());
+            M3 = int.Parse(Console.ReadLine());
+            
+        }
+    }
+    class Final:MarkDet //derived class 2
+    {
+        public void calculate()
+        {
+            Console.WriteLine("Reg no {0}\nName {1}\n",regno,name);
+            Console.WriteLine("Total % = " + ((M1 + M2 + M3) * 100) / 300);
+        }
+    }
+  
+    class Program
+    {
+        static void Main(String[] args)
+        {
+
+            Final obj = new Final();
+            obj.calculate();
+
+        }
+    }
+
+
+ //Hierarchial
+    class Sample //base class
+    {
+        protected int x, y, z;
+
+        public void getxyz()
+        {
+            Console.WriteLine("Enter 3 number ");
+            x = Convert.ToInt32(Console.ReadLine());
+            y = Convert.ToInt32(Console.ReadLine());
+            z = Convert.ToInt32(Console.ReadLine());
+        }
+
+    }
+    class Demo1 : Sample //derived class
+    {
+
+        public void compute()
+        {
+            Console.WriteLine("Sum of 3 nos = " + (x + y +z));
+        }
+       
+    }
+    class Demo2 : Sample //derived class 2
+    {
+        public void compute()
+        {
+            Console.WriteLine(" product of 3 numbers " + (x * y * z));
+        }
+    }
+    class Demo3 : Sample //derived class 2
+    {
+        public void compute()
+        {
+            Console.WriteLine(" Difference of 3 numbers " + (x - y - z));
+        }
+    }
+
+    class Program
+    {
+        static void Main(String[] args)
+        {
+
+            Demo1 obj1 = new Demo1();
+            obj1.getxyz();
+            obj1.compute();
+
+            Demo2 obj2 = new Demo2();
+            obj2.getxyz();
+            obj2.compute();
+
+            Demo3 obj3 = new Demo3();
+            obj3.getxyz();
+            obj3.compute();
+
+
+        }
+    }
+
+
+ //Constructor in inheritance
+    class Dept //base class
+    {
+        protected int noofemp;
+        protected string dname;
+
+        public Dept(string dname,int noofemp )
+        {
+            this.dname = dname;
+            this.noofemp = noofemp;
+        }
+
+    }
+    
+    class Employee : Dept //derived class 
+    {
+        string ename;
+        string edesig;
+        public Employee(string ename, string edesig,string dname,int noofemp):base(dname,noofemp)
+        {
+           this.ename = ename;
+           this.edesig = edesig;
+        }
+        public void printdetais()
+        {
+            Console.WriteLine("Dept name={0},no of employees={1}",dname,noofemp);
+            Console.WriteLine("EMp name ={0} , Designation ={1}", ename, noofemp);
+        }
+    }
+
+    class Program
+    {
+        static void Main(String[] args)
+        {
+
+            Employee obj1 = new Employee("Emmalu","SW Eng","SW Develeoper",190);
+            obj1.printdetais();
+          
+
+
+
+        }
+    }
+
+
+
+ //order of constructor
+    class Dept //base class
+    {
+        public Dept()
+        {
+            Console.WriteLine("A");
+        }
+        static Dept()
+        {
+            Console.WriteLine("B");
+        }
+    }
+
+    class Employee : Dept //derived class 
+    {
+        public Employee()
+        {
+            Console.WriteLine("C");
+        }
+        static Employee()
+        {
+            Console.WriteLine("D");
+        }
+       
+    }
+
+    class Program
+    {
+        static void Main(String[] args)
+        {
+
+         Employee obj1 = new Employee();
+
+        }
+    }
+
+
+
+ //interface
+
+    interface Interface_one
+    {
+        void display();
+        void print(int x);
+
+        string combine(string x, string y);
+    }
+
+    class sample : Interface_one
+    {
+        public string combine(string x, string y)
+        {
+            return(string.Concat(x, y));
+        }
+
+        public void display()
+        {
+            Console.WriteLine("interface method");
+        }
+
+        public void print(int x)
+        {
+          Console.WriteLine("square is"+(x*x));
+        }
+    }
+   
+    class Program
+    {
+        static void Main(String[] args)
+        {
+
+       sample s1= new sample();
+            Console.WriteLine(s1.combine("C#", "Programming"));
+            s1.display();
+            s1.print(10);
+
+        }
+    }
+
+
+//interface
+
+    interface Interface_one
+    {
+        void display();
+        void print(int x);
+
+        string combine(string x, string y);
+    }
+
+    interface Interface_two
+    {
+        int compute(int x, int y);  
+    }
+
+    class sample : Interface_one,Interface_two
+    {
+        public string combine(string x, string y)
+        {
+            return (string.Concat(x, y));
+        }
+
+        public int compute(int x, int y)
+        {
+           return (x+ y);
+        }
+
+        public void display()
+        {
+            Console.WriteLine("interface method");
+        }
+
+        public void print(int x)
+        {
+            Console.WriteLine("square is" + (x * x));
+        }
+    }
+
+    class Program
+    {
+        static void Main(String[] args)
+        {
+
+            sample s1 = new sample();
+            Console.WriteLine(s1.combine("C#", "Programming"));
+            s1.display();
+            s1.print(10);
+            Console.WriteLine(s1.compute(5, 6));
+
+        }
+    }
+
+
+ //interface ambiguity
+
+    interface Interface_one
+    {
+        void display();
+    }
+
+    interface Interface_two
+    {
+        void display();
+    }
+
+    class sample : Interface_one,Interface_two
+    {
+       
+        void Interface_one.display()
+        {
+            Console.WriteLine("interface 1 method");
+        }
+
+        void Interface_two.display()
+        {
+            Console.WriteLine("interface 2 method");
+        }
+
+
+    }
+
+    class Program
+    {
+        static void Main(String[] args)
+        {
+
+            sample s1 = new sample();
+            ((Interface_one)s1).display();
+            ((Interface_two)s1).display();
+
+
+        }
+    }
+
+
+
+    //Ambiguity between classes
+
+    namespace NS_one
+    {
+        class Demo
+        {
+            public void print()
+            {
+                Console.WriteLine("HTML, CSS and jquery");
+            }
+        }
+    }
+
+    namespace NS_two
+    {
+        class Demo
+        {
+            public void print()
+            {
+                Console.WriteLine("AJAX, XML and XAML");
+            }
+        }
+    }
+    
+
+
+    class Program
+    {
+        static void Main(String[] args)
+        {
+
+            NS_one.Demo d1 = new NS_one.Demo();
+            d1.print();
+
+            NS_two.Demo d2 = new NS_two.Demo();
+            d2.print();
+
+
+        }
+    }
+
+
+  //Polymorphism  method overloading
+    
+    class Demo
+    {
+        public void print()
+        {
+            Console.WriteLine("AJX,XML,XAML");
+        }
+        public double print(int x)
+        {
+            return (Math.Pow(x, 3));
+        }
+        public double print(int x,int y)
+        {
+            int r = x * y;
+            return(Math.Sqrt(r));
+        }
+    }
+
+    class Program
+    {
+        static void Main(String[] args)
+        {
+
+            Demo d1 = new Demo();
+            d1.print();
+            Console.WriteLine("Result ={0}", d1.print(10));
+            Console.WriteLine("Result ={0}", d1.print(10,20));
+
+        }
+    }
+
+
+  //Polymorphism  method overriding
+    
+    class Demo
+    {
+        public virtual void print()
+        {
+            Console.WriteLine("AJX,XML,XAML");
+        }
+        
+    }
+    class Demo1: Demo
+    {
+        public override void print()
+        {
+            Console.WriteLine("HTML,CSS,JS");
+        }
+
+    }
+
+    class Program
+    {
+        static void Main(String[] args)
+        {
+
+            Demo1 d1 = new Demo1();
+            d1.print();
+
+        }
+    }
+
+
+  //Polymorphism  method overriding
+    
+    class vehicle
+    {
+        public string name;
+        public decimal price;
+        public string color;
+
+        public vehicle(string name,decimal price,string color)
+        {
+            this.name = name;
+            this.price = price;
+            this.color = color;
+        }
+        public virtual void print()
+        {
+           
+        }
+        
+    }
+    class Two_wh : vehicle
+    {
+        double milage;
+        public Two_wh(string name, decimal price, string color, double milage):base(name,price,color)
+        {
+            this.milage = milage;
+        }
+        public override void print()
+        {
+            Console.WriteLine("name={0}, price ={1}, colo={2}, milage={3}",name,price,color,milage);
+        }
+
+    }
+
+    class Four_wh : vehicle
+    {
+        double milage;
+        public Four_wh(string name, decimal price, string color, double milage) : base(name, price, color)
+        {
+            this.milage = milage;
+        }
+        public override void print()
+        {
+            Console.WriteLine("name={0}, price ={1}, colo={2}, milage={3}", name, price, color, milage);
+        }
+
+    }
+
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            Two_wh obj1 = new Two_wh("Activa", 80000, "Black", 35);
+            obj1.print();
+
+            Four_wh obj2 = new Four_wh("CITY", 1180000, "Black", 35);
+            obj2.print();
+
+
+        }
+    }
+
+
+
+  //Parameter
+   
+    class Demo
+    {
+        public void function1(int a,int b) //formal parameter
+        {
+            int temp;
+            temp = a;
+            a=b;
+            b=temp;
+            Console.WriteLine("a="+a+",b="+b);
+        }
+    }
+    class Program
+    {
+        static void Main(String[] args)
+        {
+
+            int x = 100, y = 200;
+            Demo obj = new Demo();
+            obj.function1(x,y);  //actual parameter call by value
+
+        }
+    }
+
+
+
+  //Parameter  with reference
+   
+    class Demo
+    {
+        public void function1(ref int a,ref int b) //formal parameter
+        {
+            int temp;
+            temp = a;
+            a=b;
+            b=temp;
+            Console.WriteLine("a="+a+",b="+b);
+        }
+    }
+    class Program
+    {
+        static void Main(String[] args)
+        {
+
+            int a = 100, b = 200;
+            Demo obj = new Demo();
+            obj.function1(ref a,ref b);  //actual parameter call by reference
+
+        }
+    }
+
+
+
+//Out Parameter  
+   
+    class Demo
+    {
+        public void function1(int a,int b,out int Res1,out int Res2,out int Res3) 
+        {
+            Res1 = a + b;
+            Res2 = a * b;
+            Res3 = a - b;
+            Console.WriteLine("sum={0},Product={1},diff={2}",Res1,Res2,Res3);    
+        }
+    }
+    class Program
+    {
+        static void Main(String[] args)
+        {
+
+            int a = 100, b = 200,Res1,Res2,Res3;
+            Demo obj = new Demo();
+            obj.function1(a,b,out Res1,out Res2,out Res3);  
+            Console.WriteLine("sum={0},Product={1},diff={2}", Res1, Res2, Res3);
+        }
+    }
+
+
+//Params  
+   
+    class Demo
+    {
+        public void function1(params int []a) 
+        {
+          foreach(int i in a)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+    class Program
+    {
+        static void Main(String[] args)
+        {
+
+           
+            Demo obj = new Demo();
+            obj.function1(10,20,30);
+
+            Console.WriteLine("------------------");
+            Demo obj2 =new Demo();
+            obj2.function1(40,50,60,70,100,120);
+            obj2.function1();
+
+            Console.WriteLine("------------------");
+            int[] a = new int[] { 100, 200, 300, 400 };
+            Demo obj3 =new Demo();
+            obj3.function1(a);
+
+        }
+    }
+
+
+ //Params  
+   
+    class Demo
+    {
+        public void function1(params object []a) 
+        {
+          foreach(object i in a)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+    class Program
+    {
+        static void Main(String[] args)
+        {
+
+           
+            Demo obj = new Demo();
+            obj.function1(10,"AJAX",20,"HTML",30);
+
+            Console.WriteLine("------------------");
+            Demo obj2 =new Demo();
+            obj2.function1(40.4,50.5,60.6,70,"Hello",100,"World",120.2);
+            obj2.function1();
+
+            Console.WriteLine("------------------");
+            object[] a = new object[] { 100, 200,"Emmalu", 300,"Joseph", 400 };
+            Demo obj3 =new Demo();
+            obj3.function1(a);
+
+        }
+    }
+
+
+
+
+    //named parameter
+    class Demo
+    {
+        public void function1(int cid,string cname,decimal deptmt) 
+        {
+            Console.WriteLine("Customer id ={0}", cid);
+            Console.WriteLine("Customer Name={0}", cname);
+            Console.WriteLine("Customer Deposit amount={0}", deptmt);
+        }
+
+    }
+    class Program
+    {
+        static void Main(String[] args)
+        {
+
+           
+            Demo obj = new Demo();
+            obj.function1(deptmt:3450,cid:1,cname:"Joseph");
+
+
+        }
+    }
+
+
+
+  //default or optional
+    class Demo
+    {
+        public void function1(int cid,string cname,string department="CS",string exp="fresher") 
+        {
+            Console.WriteLine("Customer id ={0}", cid);
+            Console.WriteLine("Customer Name={0}", cname);
+            Console.WriteLine("Customer department={0}", department);
+            Console.WriteLine("Customer  experiance={0}", exp);
+        }
+
+    }
+    class Program
+    {
+        static void Main(String[] args)
+        {
+
+           
+            Demo obj = new Demo();
+            obj.function1(1,"Emmalu");
+
+            Demo obj1 = new Demo();
+            obj1.function1(2, "Joseph","IT","Trainee");
+
+
+        }
+
+
+ //abstract class
+    abstract class Demo
+    {
+        protected int a, b;
+
+        public void readab()
+        {
+            Console.WriteLine("Enter two number ");
+            a=Convert.ToInt32(Console.ReadLine());
+            b=Convert.ToInt32(Console.ReadLine());
+        }
+        abstract public void show();
+    }
+    class demo1 : Demo
+    {
+        public override void show()
+        {
+            Console.WriteLine("Product ="+(a*b));
+        }
+    }
+    class Program
+    {
+        static void Main(String[] args)
+        {
+
+           
+            demo1 obj=new demo1();
+            obj.readab();
+            obj.show();
+
+         
+
+        }
+    }
+
+
+
+ //sealed class
+    sealed class Demo
+    {
+        protected double a, b;
+
+        public void readab()
+        {
+            Console.WriteLine("Enter two number ");
+            a=Convert.ToDouble(Console.ReadLine());
+            b=Convert.ToDouble(Console.ReadLine());
+        }
+        
+        public double show()
+        {
+            return Math.Sqrt(a*a + b*b);
+        }
+       
+    }
+    
+    class Program
+    {
+        static void Main(String[] args)
+        {
+
+           
+            Demo obj = new Demo();
+            obj.readab();
+            Console.WriteLine(obj.show());
+
+
+         
+
+        }
+    }
+
+
+
+
+ 
+    //static class
+    static class Demo
+    {
+        static double a, b;
+
+        public static void readab()
+        {
+            Console.WriteLine("Enter two number ");
+            a=Convert.ToDouble(Console.ReadLine());
+            b=Convert.ToDouble(Console.ReadLine());
+        }
+        
+        public static double show()
+        {
+            return Math.Sqrt(a*a + b*b);
+        }
+       
+    }
+    
+    class Program
+    {
+        static void Main(String[] args)
+        {
+
+           
+            Demo.readab();
+            Console.WriteLine(Demo.show());
+
+        }
+    }
+
+
+
+//partial method
+    partial class Demo
+    {
+        partial void addnos();
+        partial void subnos();
+    }
+    partial class Demo
+    {
+        double a, b;
+
+        public void readab()
+        {
+            Console.WriteLine("Enter two number ");
+            a = Convert.ToDouble(Console.ReadLine());
+            b = Convert.ToDouble(Console.ReadLine());
+        }
+
+        public double show()
+        {
+            return Math.Sqrt(a * a + b * b);
+        }
+        partial void addnos()
+        {
+            Console.WriteLine(a + b);
+        }
+        partial void subnos()
+        {
+            Console.WriteLine(a - b);
+        }
+    }
+        class Program
+        {
+            static void Main(String[] args)
+            {
+
+
+                Demo obj = new Demo();
+                obj.readab();
+                Console.WriteLine(obj.show());
+
+            }
+        }
+
+
+    }
+
+
+//accessing private datamembers
+    
+    class Account
+    {
+        string accno;
+        string ahname;
+        decimal deptamt;
+
+        public string _accno
+        {
+            get { return accno; }
+            set { accno = value; }
+        }
+
+        public string _ahname
+        {
+            get { return ahname; }      
+            set { ahname = value; }
+        }
+
+        public decimal _Deptamt
+        {
+            get { return deptamt; } 
+            set { deptamt = value; }
+        }
+    }
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            Account obj=new Account();
+            obj._accno = "ABC123";
+            obj._ahname = "Jospeh";
+            obj._Deptamt = 300000;
+
+            Console.WriteLine("Acc no =" + obj._accno);
+            Console.WriteLine("Name = "+obj._ahname);
+            Console.WriteLine("AMount ="+obj._Deptamt);
+
+
+        }
+    }
+
+
+
+
+
+
+//read only property
+    
+    class Bank
+    {
+        string bname;
+        string branch;
+        decimal btramt;
+
+        public Bank()
+        {
+            this.bname = "SIB";
+            this.branch = "Diary circle";
+            this.btramt = 4500000;
+        }
+        public string _bname
+        {
+            get { return bname; }
+           
+        }
+
+        public string _branch
+        {
+            get { return branch; }      
+           
+        }
+
+        public decimal _btramt
+        {
+            get { return btramt; } 
+            
+        }
+    }
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            Bank obj=new Bank();
+         
+            Console.WriteLine("Bank =" + obj._bname);
+            Console.WriteLine("Branch = "+obj._branch);
+            Console.WriteLine("Transaction ="+obj._btramt);
+
+
+        }
+    }
+
+
+//write only property
+    
+    class Bank
+    {
+        string bname;
+        string branch;
+        decimal btramt;
+
+       
+        public string _bname
+        {
+            
+            set { bname = value; }
+        }
+
+        public string _branch
+        {
+           
+            set { branch = value; }
+        }
+
+        public decimal _btramt
+        {
+           
+            set { btramt = value; }
+        }
+        public void print()
+        {
+            Console.WriteLine("Bank =" + bname);
+            Console.WriteLine("Branch = " + branch);
+            Console.WriteLine("Transaction =" + btramt);
+        }
+    }
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            Bank obj=new Bank();
+            obj._bname = "SIB";
+            obj._branch = "Diary circle";
+            obj._btramt = 300000;
+
+            obj.print();
+            //Console.WriteLine("Bank =" + obj._bname);
+            //Console.WriteLine("Branch = "+obj._branch);
+            //Console.WriteLine("Transaction ="+obj._btramt);
+
+
+        }
+    }
+
+
+
+
+//property
+    
+    class Bank
+    {
+        string bname;
+        string branch;
+        decimal btramt;
+
+       
+        public string _bname { get; set; }
+       
+        public string _branch { get; set; }
+
+        public decimal _btramt { get; set; }
+       
+    }
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            Bank obj=new Bank();
+            obj._bname = "SIB";
+            obj._branch = "Diary circle";
+            obj._btramt = 300000;
+
+            Console.WriteLine("Bank =" + obj._bname);
+            Console.WriteLine("Branch = " + obj._branch);
+            Console.WriteLine("Transaction =" + obj._btramt);
+
+
+        }
+    }
+
+
+
+ //indexer
+    
+    class Demo
+    {
+        int[] a;
+         
+        public Demo()
+        {
+            a = new int[] { 10, 20, 30, 40 };
+        }
+
+        public int this [int index]
+        {
+            get { return a [index]; }
+            set { a [index] = value; }
+        }
+       
+    }
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            Demo obj= new Demo();
+            obj[0] = 100; //set
+            obj[1] = 700;
+            for(int i=0; i < 4; i++)
+            {
+                Console.WriteLine(obj[i]); //get
+            }
+
+        }
+    }
+
+
+
+
+
+    //indexer for 2D array
+    
+    class Demo
+    {
+        int[,] a;
+         
+        public Demo()
+        {
+            a = new int[,] { { 10, 20 },{ 30, 40 } };
+        }
+
+        public int this [int index1,int index2]
+        {
+            get { return a [index1,index2]; }
+            set { a [index1,index2] = value; }
+        }
+       
+    }
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            Demo obj= new Demo();
+            obj[0,1] = 100; //set
+            obj[1,1] = 700;
+            for(int i=0; i < 2; i++)
+            {
+                for(int j=0; j < 2; j++)
+                {
+                    Console.WriteLine(obj[i,j]); //get
+                }
+               
+            }
+
+        }
+    }
+
+
+
+ //ArrayList
+    
+   
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            ArrayList a1 = new ArrayList();
+            a1.Add(1);
+            a1.Add(2);
+            a1.Add("HTML");
+            a1.Add(3.14);
+            a1.Add(3);
+            a1.Add(4);
+
+            a1.AddRange(new int[] {100,200,300});
+
+            foreach(var i in a1)
+            {
+                Console.WriteLine(i);
+            }
+
+            Console.WriteLine("-------------------------------------------");
+            a1.Remove("HTML");
+            a1.RemoveAt(2);
+            a1.RemoveRange(0, 2);
+
+            foreach (var i in a1)
+            {
+                Console.WriteLine(i);
+            }
+
+            Console.WriteLine("-------------------------------------------");
+            a1.Sort(); //arraylist should contain same type
+            a1.Reverse();
+            foreach (var i in a1)
+            {
+                Console.WriteLine(i);
+            }
+
+        }
+    }
+
+
+
+ //Hashtable
+    
+   
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            Hashtable ht = new Hashtable();
+            ht.Add("AJAX", "Asynchronous javascript and xml");
+            ht.Add("JSON", "javascript object notation");
+            ht.Add("XAML", "Extensible Application markup language");
+            ht.Add("XML","Extensible markup language");
+
+            ICollection ckeys = ht.Keys;
+            foreach (string key in ckeys)
+            {
+                Console.WriteLine(key);
+            }
+
+            ICollection cvakues = ht.Values;
+            foreach (string i in cvakues)
+            {
+                Console.WriteLine(i);
+            }
+
+            IDictionaryEnumerator etr = ht.GetEnumerator();
+            while (etr.MoveNext())
+            {
+                Console.WriteLine(etr.Key+ "-->"+etr.Value);
+            }
+
+            foreach(DictionaryEntry et in ht)
+            {
+                Console.WriteLine(et.Key + "-->" + et.Value);
+            }
+        }
+    }
+
+
+
+    //SortedList
+    
+   
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            SortedList ht = new SortedList();
+            ht.Add("AJAX", "Asynchronous javascript and xml");
+            ht.Add("JSON", "javascript object notation");
+            ht.Add("XAML", "Extensible Application markup language");
+            ht.Add("XML","Extensible markup language");
+
+            ICollection ckeys = ht.Keys;
+            foreach (string key in ckeys)
+            {
+                Console.WriteLine(key);
+            }
+
+            ICollection cvakues = ht.Values;
+            foreach (string i in cvakues)
+            {
+                Console.WriteLine(i);
+            }
+
+            IDictionaryEnumerator etr = ht.GetEnumerator();
+            while (etr.MoveNext())
+            {
+                Console.WriteLine(etr.Key+ "-->"+etr.Value);
+            }
+
+            foreach(DictionaryEntry et in ht)
+            {
+                Console.WriteLine(et.Key + "-->" + et.Value);
+            }
+        }
+    }
+
+
+  //stack
+
+    class Program
+    {
+        
+        static void Main(String[] args)
+        {
+            Stack st = new Stack(); //LIFO
+            st.Push(100);
+            st.Push(200);
+            st.Push(300);
+            st.Push(400);
+
+            st.Pop();
+
+            foreach(int i in st)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+
+
+ //Queue
+
+    class Program
+    {
+        
+        static void Main(String[] args)
+        {
+            
+            Queue q1 = new Queue(); //FIFO
+            q1.Enqueue("HTML");
+            q1.Enqueue("DHTML");
+            q1.Enqueue("xml");
+            q1.Enqueue("XAML");
+
+            q1.Dequeue();
+
+            foreach (object i in q1)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+
+
+
+  //List in Generic
+
+    class Program
+    {
+        
+        static void Main(String[] args)
+        {
+
+            List<int> list1 = new List<int>();
+
+            list1.Add(100);
+            list1.Add(200);
+            list1.Add(300);
+            list1.Add(400);
+
+            list1.AddRange(new int[] { 4,10, 20, 30 });
+
+            list1.RemoveAt(2);
+            list1.Sort();
+
+            foreach(int i in list1)
+            {
+                Console.WriteLine(i);
+            }
+
+        }
+
+
+
+ //List in Generic
+
+    class Member
+    {
+        public int mid { get; set; }
+        public string name { get;set; }
+        public string location { get;set; }
+    }
+    class Program
+    {
+        
+        static void Main(String[] args)
+        {
+
+            List<Member> list1 = new List<Member>(){
+                new Member() { mid=5,name="sera",location="USA" },
+                new Member() { mid=1,name="SMitha",location="UAE" }
+            };
+
+            list1.Add(new Member() { mid=1,name="Jose",location="UK"}); //object initialiser
+            list1.Add(new Member() { mid = 2, name = "joy", location = "UKA" });
+            list1.Add(new Member() { mid = 3, name = "baby", location = "UKS" });
+            list1.Add(new Member() { mid = 4, name = "dijo", location = "UKI" });
+
+          
+           
+           
+
+            foreach(var i in list1)
+            {
+                Console.WriteLine(i.mid +","+i.name+","+i.location);
+            }
+
+        }
+    }
+
+
+
+  //Dictionary in Generic
+
+   
+    class Program
+    {
+        
+        static void Main(string[] args)
+        {
+
+            Dictionary<int,string> di= new Dictionary<int,string>();
+            di.Add(3, "HTML");
+            di.Add(2, "CSS");
+            di.Add(1, "Javascript");
+            di.Add(4, "PHP");
+
+            foreach(var i in di)
+            {
+                Console.WriteLine(i);
+            }
+
+            ICollection<int> Dkeys = di.Keys;
+            foreach(var i in Dkeys)
+            {
+                Console.WriteLine(i);
+            }
+
+            ICollection<string> Dvalue = di.Values;
+            foreach (var i in Dvalue)
+            {
+                Console.WriteLine(i);
+            }
+
+            foreach(KeyValuePair<int,string> kvp in di)
+            {
+                Console.WriteLine(kvp.Key+","+ kvp.Value);
+            }
+
+            IDictionaryEnumerator et=di.GetEnumerator();
+            while(et.MoveNext())
+            {
+                Console.WriteLine(et.Key+"--"+et.Value);
+            }
+
+        }
+    }
+
+
+  //SortedDictionary in Generic
+
+   
+    class Program
+    {
+        
+        static void Main(string[] args)
+        {
+
+            SortedDictionary<int,string> di= new SortedDictionary<int,string>();
+            di.Add(3, "HTML");
+            di.Add(2, "CSS");
+            di.Add(1, "Javascript");
+            di.Add(4, "PHP");
+
+            foreach(var i in di)
+            {
+                Console.WriteLine(i);
+            }
+
+            ICollection<int> Dkeys = di.Keys;
+            foreach(var i in Dkeys)
+            {
+                Console.WriteLine(i);
+            }
+
+            ICollection<string> Dvalue = di.Values;
+            foreach (var i in Dvalue)
+            {
+                Console.WriteLine(i);
+            }
+
+            foreach(KeyValuePair<int,string> kvp in di)
+            {
+                Console.WriteLine(kvp.Key+","+ kvp.Value);
+            }
+
+            IDictionaryEnumerator et=di.GetEnumerator();
+            while(et.MoveNext())
+            {
+                Console.WriteLine(et.Key+"--"+et.Value);
+            }
+
+        }
+    }
+
+
+
+
+    //Hashset in Generic
+   
+    class Program
+    {
+        
+        static void Main(string[] args)
+        {
+
+            HashSet<int> hs = new HashSet<int>();
+            hs.Add(100);
+            hs.Add(200);
+            hs.Add(300);
+            hs.Add(300); //it will override the previos value
+            hs.Add(400);
+
+            HashSet<string> hs1 = new HashSet<string>();
+            hs1.Add("html");
+            hs1.Add("AJAX");
+            hs1.Add("MVC");
+            hs1.Add("C#"); 
+            hs1.Add("LINQ");
+
+            HashSet<string> hs2 = new HashSet<string>();
+            hs2.Add("CSS");
+            hs2.Add("JAVA");
+            hs2.Add("MVC");
+            hs2.Add("C#");
+            hs2.Add("C++");
+       
+
+            foreach (var i in hs)
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine("----------------------------");
+            foreach (var i in hs1)
+            {
+                Console.WriteLine(i);
+            }
+
+            Console.WriteLine("----------------------------");
+            foreach (var i in hs2)
+            {
+                Console.WriteLine(i);
+            }
+
+
+            Console.WriteLine("----------------------------");
+            //hs2.UnionWith(hs1);
+            //hs2.IntersectWith(hs1);
+            hs1.ExceptWith(hs1);
+            foreach (var i in hs2)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+
+
+
+ //Stack in Generic
+   
+    class Program
+    {
+        
+        static void Main(string[] args)
+        {
+            Stack<string> obj = new Stack<string>();
+            obj.Push("SQL");
+            obj.Push("Mysql");
+            obj.Push("oracle");
+            obj.Push("MongoDB");
+
+            foreach (var i in obj)
+            {
+                Console.WriteLine(i);
+            }
+
+
+        }
+    }
+
+
+//Queue in Generic
+   
+    class Program
+    {
+        
+        static void Main(string[] args)
+        {
+            Queue<string> obj = new Queue<string>();
+            obj.Enqueue("SQL");
+            obj.Enqueue("Mysql");
+            obj.Enqueue("oracle");
+            obj.Enqueue("MongoDB");
+
+            foreach (var i in obj)
+            {
+                Console.WriteLine(i);
+            }
+
+
+        }
+    }
+
+
+//Generic Class
+
+    class Course<T1,T2,T3>
+    {
+        public T1 cid;
+        public T2 cname;
+        public T3 cfee;
+        
+        public Course(T1 cid,T2 cname,T3 cfee)
+        {
+            this.cid = cid;
+            this.cname = cname; 
+            this.cfee = cfee;
+        }
+
+        public void print()
+        {
+            Console.WriteLine(cid + "," + cname + "," + cfee);
+        }
+    }
+   
+    class Program
+    {
+        
+        static void Main(string[] args)
+        {
+            Course<int, string, double> c1 = new Course<int,string,double>(1,"PHP",2345.56);
+            c1.print();
+
+            Course<int, int, double> c2 = new Course<int, int, double>(2, 156, 2345.56);
+            c2.print();
+
+            Course<string, string, double> c3 = new Course<string, string, double>("A12", "PHP", 2345.56);
+            c3.print();
+        }
+    }
+
+
+
+ //Icomparable 
+
+    class Member:IComparable
+    {
+        public int mid { get; set; }
+        public string name { get; set; }
+        public string location { get; set; }
+
+
+        //-1 a>b no swapping
+        //0 a==b no swapping
+        //1 a<b swapping
+        public int CompareTo(object obj)
+        {
+           Member mobj = obj as Member;
+            if(mobj!=null)
+            {
+                return this.name.CompareTo(mobj.name);
+            }
+            return -1;
+        }
+    }
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+
+            List<Member> list1 = new List<Member>(){
+                new Member() { mid=5,name="sera",location="USA" },
+                new Member() { mid=1,name="SMitha",location="UAE" }
+            };
+
+            list1.Add(new Member() { mid = 1, name = "Jose", location = "UK" }); //object initialiser
+            list1.Add(new Member() { mid = 2, name = "joy", location = "UKA" });
+            list1.Add(new Member() { mid = 3, name = "baby", location = "UKS" });
+            list1.Add(new Member() { mid = 4, name = "dijo", location = "UKI" });
+
+
+            list1.Sort();
+
+
+            foreach (var i in list1)
+            {
+                Console.WriteLine(i.mid + "," + i.name + "," + i.location);
+            }
+
+        }
+    }
+
+
+
+ //IComparer 
+
+    public class Member
+    {
+        public int mid { get; set; }
+        public string name { get; set; }
+        public string location { get; set; }
+
+       
+    }
+    //-1 a>b no swapping
+    //0 a==b no swapping
+    //1 a<b swapping
+    public class mlocationcomparer : IComparer<Member>
+    {
+        public int Compare(Member x, Member y)
+        {
+            return x.location.CompareTo(y.location);
+        }
+    }
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+
+            Member[] list1 = new Member[]{
+                new Member() { mid=5,name="sera",location="USA" },
+                new Member() { mid=1,name="SMitha",location="UAE" },
+                new Member() { mid = 3, name = "Jose", location = "UK" },
+                new Member() { mid = 2, name = "joy", location = "UKA" }
+            };
+
+           
+
+
+           Array.Sort(list1,new mlocationcomparer());
+
+
+            foreach (var i in list1)
+            {
+                Console.WriteLine(i.mid + "," + i.name + "," + i.location);
+            }
+
+        }
+    }
+
+
+ //File Writing
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            string data = "This is file handling in C#";
+            string path = @"C:\Users\Emmalu.Joseph\Documents\file1.txt"; //verbatim
+           
+            File.WriteAllText(path, data);
+
+
+        }
+    }
+
+
+
+//File Reading
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            string data ;
+            string path = @"C:\Users\Emmalu.Joseph\Documents\dotnet_training.txt"; //verbatim
+            data=File.ReadAllText(path);
+           Console.WriteLine(data);
+
+
+        }
+    }
+
+
+//FileStream
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            FileStream fs = new FileStream(@"C:\Users\Emmalu.Joseph\Documents\file1.txt", FileMode.Create);
+            StreamWriter sw = new StreamWriter(fs);
+            String str = "C# file handling with file stream class";
+            sw.WriteLine(str);
+            sw.Close();
+            fs.Close();
+
+        }
+    }
+
+
+
+//FileStream File Exist
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            string path = @"C:\Users\Emmalu.Joseph\Documents\dotnet_training.txt";
+            if(File.Exists(path))
+            {
+                FileStream fs = new FileStream(path, FileMode.Open);
+                StreamReader sr = new StreamReader(fs);
+                String str;
+
+                while ((str = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(str);
+                }
+                sr.Close();
+                fs.Close();
+            }
+            else
+            {
+                Console.WriteLine("FIle not exist");
+            }
+           
+
+        }
+    }
+
+
+ //FileStream 
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            string path = @"C:\Users\Emmalu.Joseph\Documents\dotnet_training.txt";
+            if(File.Exists(path))
+            {
+                FileStream fs = new FileStream(path, FileMode.Open);
+                StreamWriter sw = new StreamWriter(fs);
+                sw.Write("streamwriter class for write and appednd operation,streamreader class for read operation");
+                sw.Close();
+                fs.Close();
+            }
+            else
+            {
+                Console.WriteLine("FIle not exist");
+            }
+           
+
+        }
+    }
+
+
+
+//FileInfo
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            FileInfo fi = new FileInfo(@"C:\Users\Emmalu.Joseph\Documents\file1.txt");
+            StreamReader sr =fi.OpenText();
+            Console.Write(sr.ReadToEnd());
+            sr.Close();
+        }
+    }
+
+
+
+ //FileInfo
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            FileInfo fi = new FileInfo(@"C:\Users\Emmalu.Joseph\Documents\file1.txt");
+            StreamWriter sw =fi.CreateText();
+            sw.Write("file is create with fileinfo class");
+            sw.Close();
+        }
+    }
+
+//FileInfo
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            FileInfo fi = new FileInfo(@"C:\Users\Emmalu.Joseph\Documents\file1.txt");
+            StreamWriter sw =fi.AppendText();
+            string str = "append file using fileinfo class";
+            sw.Write(str);
+            sw.Close();
+        }
+    }
+
+
+
+//FileInfo
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            FileInfo fi = new FileInfo(@"C:\Users\Emmalu.Joseph\Documents\file1.txt");
+            StreamWriter sw =fi.AppendText();
+            string str = "append file using fileinfo class";
+            sw.Write(str);
+            sw.Close();
+
+            Console.WriteLine(fi.Name);
+            Console.WriteLine(fi.Length);
+            Console.WriteLine(fi.CreationTime);
+            Console.WriteLine(fi.LastAccessTime);
+            Console.WriteLine(fi.LastWriteTime);
+            Console.WriteLine(fi.DirectoryName);
+
+            //fi.Delete();//Deleting the file
+        }
+    }
+
+
+
+ //FileInfo file copy
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            FileInfo fi = new FileInfo(@"C:\Users\Emmalu.Joseph\Documents\file1.txt");
+            string path = @"C:\Users\Emmalu.Joseph\Documents\file1_copied.txt";
+            fi.CopyTo(path);
+        }
+    }
+
+
+ //FileInfo move file
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            FileInfo fi = new FileInfo(@"C:\Users\Emmalu.Joseph\Documents\file1.txt");
+            string path = @"C:\Users\Emmalu.Joseph\Documents\Dotnet_course\file1_copied.txt";
+            fi.MoveTo(path);
+        }
+    }
+
+
+
+using System;
+using System.Text;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+
+
+namespace MYAPPONE
+{
+   //Binary serialization
+
+    [Serializable]
+    class Employee
+    {
+        public int eid;
+        public string ename;
+        public string edesig;
+
+        public Employee()
+        {
+            this.eid = 1;
+            this.ename = "Jospeh";
+            this.edesig = "TL";
+        }
+    }
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            Employee obj = new Employee();
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream fs = new FileStream(@"C:\Users\Emmalu.Joseph\Documents\Dotnet_course\Demofile1.txt", FileMode.Create);
+            bf.Serialize(fs, obj);
+            fs.Close();
+        }
+    }
+
+
+}
+
+
+
+
+
+using System.Runtime.Serialization.Formatters.Binary;
+
+
+namespace MYAPPONE
+{
+   //Binary serialization
+
+    [Serializable]
+    class Employee
+    {
+        public int eid;
+        public string ename;
+        public string edesig;
+
+        public Employee()
+        {
+            this.eid = 1;
+            this.ename = "Jospeh";
+            this.edesig = "TL";
+        }
+    }
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream fs = new FileStream(@"C:\Users\Emmalu.Joseph\Documents\Dotnet_course\Demofile1.txt", FileMode.Open);
+            Employee obj=(Employee) bf.Deserialize(fs);
+            Console.WriteLine(obj.eid+","+obj.ename+","+obj.edesig);
+            fs.Close();
+        }
+    }
+
+
+}
+
+
+
+// See https://aka.ms/new-console-template for more information
+using System;
+using System.Text;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using System.Xml.Serialization;
+
+
+namespace MYAPPONE
+{
+    //xml serialization
+
+    [Serializable]
+    public class Employee
+    {
+        public int eid;
+        public string ename;
+        public string edesig;
+
+        public Employee()
+        {
+            this.eid = 1;
+            this.ename = "Jospeh";
+            this.edesig = "TL";
+        }
+    }
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            Employee emp = new Employee();
+            XmlSerializer xs = new XmlSerializer(typeof(Employee));
+            FileStream fs = new FileStream(@"C:\Users\Emmalu.Joseph\Documents\Dotnet_course\Demofile1xml.txt", FileMode.Create);
+            xs.Serialize(fs, emp);
+            fs.Close();
+
+            FileStream fs = new FileStream(@"C:\Users\Emmalu.Joseph\Documents\Dotnet_course\Demofile1xml.txt", FileMode.Open);
+            XmlSerializer xs= new XmlSerializer(typeof(Employee));
+            Employee emp = (Employee)xs.Deserialize(fs);
+            Console.WriteLine(emp.eid + "," + emp.ename + "," + emp.edesig);
+            fs.Close();
+        }
+    }
+
+
+}
+
+
+
+
+
+// See https://aka.ms/new-console-template for more information
+using System;
+using System.Text;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Json;
+using System.Runtime.Serialization;
+
+
+namespace MYAPPONE
+{
+    //Json serialization
+
+    [DataContract]
+    public class Employee
+    {
+        [DataMember]
+        public int eid;
+        [DataMember]
+        public string ename;
+        [DataMember]
+        public string edesig;
+
+        public Employee()
+        {
+            this.eid = 1;
+            this.ename = "json";
+            this.edesig = "TL";
+        }
+    }
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            Employee emp = new Employee();
+            DataContractJsonSerializer xs = new DataContractJsonSerializer(typeof(Employee));
+            FileStream fs = new FileStream(@"C:\Users\Emmalu.Joseph\Documents\Dotnet_course\Demofile1json.txt", FileMode.Create);
+            xs.WriteObject(fs, emp);
+            fs.Close();
+
+  	    DataContractJsonSerializer xs = new DataContractJsonSerializer(typeof(Employee));
+            FileStream fs = new FileStream(@"C:\Users\Emmalu.Joseph\Documents\Dotnet_course\Demofile1json.txt", FileMode.Open);
+            Employee emp = (Employee)xs.ReadObject(fs);
+            Console.WriteLine(emp.eid + "," + emp.ename + "," + emp.edesig);
+            fs.Close();
+
+        }
+    }
+
+
+}
+
+
+
+  //Exception Handling
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+
+            int a, b;
+            a = 100;
+            b = 0;
+            try
+            {
+                int res = a / b;
+                Console.WriteLine(res);
+             
+            }
+            catch (DivideByZeroException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
+        }
+
+  //Exception Handling
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+
+           int[] arr = { 10, 20, 30, 40, 50 };
+            try
+            {
+
+                
+                for (int i = 0; i < 6; i++)
+                {
+                    Console.WriteLine(arr[i]);
+                }
+            }
+            catch (DivideByZeroException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch(IndexOutOfRangeException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
+        }
+
+
+
+ //Exception Handling
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+
+            int[] arr = { 10, 20, 30, 40, 50 };
+            int[] arr2 = { 10, 20, 30, };
+          
+            try
+            {
+                arr.CopyTo(arr2, 0);
+
+            }
+            catch (DivideByZeroException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch(IndexOutOfRangeException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch(ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                Console.WriteLine("End of the code");
+            }
+            
+        }
+    }
+
+
+
+// See https://aka.ms/new-console-template for more information
+using System;
+using System.Text;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Json;
+using System.Runtime.Serialization;
+
+
+namespace MYAPPONE
+{
+   //Exception Handling
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            FileStream fs= null;
+            StreamReader sr= null;
+            try
+            {
+                string path = @"C:\Users\Emmalu.Joseph\Documents\dotnet.txt";
+                fs = new FileStream(path, FileMode.Open);
+                sr = new StreamReader(fs);
+                String str;
+
+                while ((str = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(str);
+                }
+                
+            }
+            catch(FileNotFoundException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                sr.Close();
+                fs.Close();
+            }
+           
+           
+        }
+    }
+
+
+}
+
+
+
+
+
+
+  //Exception Handling
+   class Demo
+    {
+        public void validateamt(double amt)
+        {
+            if(amt >=50000 && amt<= 500000)
+            {
+                Console.WriteLine("valid amount");
+            }
+            else
+            {
+                throw new ArgumentException();
+            }
+        }
+    }
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            double amt;
+            Console.WriteLine("Enter dep amount");
+            amt = double.Parse(Console.ReadLine());
+            try
+            {
+               Demo obj=new Demo();
+                obj.validateamt(amt);
+            }
+            catch(ArgumentException ex)
+            {
+                Console.WriteLine("Wrong argument");
+            }
+            finally
+            {
+                Console.WriteLine("ENd");
+            }
+           
+           
+        }
+    }
+
+
+
+  //Delegate
+  
+    class Program
+    {
+        delegate void MyDelegate(int x);
+        class test
+        {
+            public void method1(int x)
+            {
+                Console.WriteLine("Result1=" + x);
+            }
+
+            public void method2(int x)
+            {
+                Console.WriteLine("Result1=" + x*x);
+            }
+        }
+        static void Main(String[] args)
+        {
+           
+            test tobj=new test();
+            MyDelegate del1=new MyDelegate(tobj.method1);
+            del1(10);
+
+            test tobj1 = new test();
+            MyDelegate del2 = new MyDelegate(tobj1.method2);
+            del2(10);
+
+        }
+    }
+
+
+
+
+
+
+   //multi-cast Delegate
+  
+    class Program
+    {
+        delegate void MyDelegate(int x,int y);
+        class test
+        {
+            public void method1(int x,int y)
+            {
+                Console.WriteLine("Result1=" + (x+y));
+            }
+
+            public void method2(int x,int y)
+            {
+                Console.WriteLine("Result1=" + (x*y));
+            }
+
+            public void method3(int x, int y)
+            {
+                Console.WriteLine("Result1=" + (x - y));
+            }
+        }
+        static void Main(String[] args)
+        {
+           
+            test tobj=new test();
+            MyDelegate del1=new MyDelegate(tobj.method1);
+            del1(10,20);
+
+            test tobj1 = new test();
+            MyDelegate del2 = new MyDelegate(tobj1.method2);
+            del2(10,30);
+
+            test tobj2 = new test();
+            MyDelegate del3 = new MyDelegate(tobj2.method3);
+            del3(10, 30);
+
+            MyDelegate del4 = del1 + del2 + del3; //multi-cast
+            del4(10, 30);
+		
+	    MyDelegate del5 = del1 - del2 + del3; //multi-cast
+            del5(10, 30);
+
+
+        }
+    }
+
+
+
+
+
+//Generic Delegate
+//func Delegate
+namespace MYAPPONE
+{
+    
+
+    class Test
+    {
+        public double method1(int a, int b, int c)
+        {
+            return ((a + b + c) / 3);
+        }
+        
+        public int method2(int x,int y)
+        {
+            return (x * y);
+        }
+    }
+
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            Test tobj = new Test();
+            Func<int, int, int, double> fdel1 = new Func<int, int, int, double>(tobj.method1);
+            Console.WriteLine("Average of 3 nos =" + fdel1(90, 78, 85));
+
+            Func<int, int, int> fdel2 = new Func<int, int, int>(tobj.method2);
+            Console.WriteLine("Product of 2 nos =" + fdel2(90, 78));
+
+        }
+    }
+
+
+}
+
+
+
+
+
+//Generic Delegate
+//Action Delegate
+namespace MYAPPONE
+{
+    
+
+    class Test
+    {
+        public void method1(int a, int b, int c)
+        {
+           Console.WriteLine((a + b + c) / 3);
+        }
+        
+        public void method2(int x,int y)
+        {
+            Console.WriteLine(x * y);
+        }
+    }
+
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            Test tobj = new Test();
+            Action<int, int, int> Adel1 = new Action<int, int, int>(tobj.method1);
+            fdel1(90, 78, 85);
+
+            Action<int, int> Adel2 = new Action<int, int>(tobj.method2);
+            fdel2(90, 78);
+
+        }
+    }
+
+
+}
+
+
+
+//Generic Delegate
+//Predict Delegate
+namespace MYAPPONE
+{
+    
+
+    class Test
+    {
+        public bool method1(string username)
+        {
+            if (username.Length > 4)
+                return true;
+            else
+                return false;
+        }
+
+        public bool method2(string role)
+        {
+            if (role.StartsWith('A'))
+                return true;
+            else
+                return false;
+        }
+
+
+    }
+
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            Test tobj = new Test();
+            Predicate<string> Pdel1 = new System.Predicate<string>(tobj.method1);
+            Console.WriteLine(Pdel1("Emmalu"));
+
+            Predicate<string> Pdel2 = new System.Predicate<string>(tobj.method2);
+            Console.WriteLine(Pdel2("Admin"));
+
+
+        }
+    }
+
+
+}
+
+
+
+
+//Anonymus  Types
+
+namespace MYAPPONE
+{
+    
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+
+            var stdet = new
+            {
+                sid = 1,
+                sname = "Joseph",
+                sedu = "MCA",
+                staddr = new   //nested anonymus type
+                {
+                    dno=12,
+                    street="sg palya",
+                    city="Bengaluru"
+                }
+            };
+
+            Console.WriteLine(stdet.sid+","+stdet.sname+","+stdet.sedu);
+            Console.WriteLine(stdet.staddr.dno + "," + stdet.staddr.street + "," + stdet.staddr.city);
+        }
+    }
+
+
+}
+
+
+//Anonymus  Types
+//Dynamic
+
+namespace MYAPPONE
+{
+    class sample
+    {
+        public static void display(dynamic stdet)
+        {
+            Console.WriteLine(stdet);
+        }
+    }
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+
+            var stdet = new
+            {
+                sid = 1,
+                sname = "Joseph",
+                sedu = "MCA",
+                staddr = new   //nested anonymus type
+                {
+                    dno = 12,
+                    street = "sg palya",
+                    city = "Bengaluru"
+                }
+            };
+
+            sample.display(stdet);
+        }
+
+    }
+
+
+}
+
+
+
+//compile time and runtime checking
+ class Program
+    {
+
+        static void Main(String[] args)
+        {
+            //string x = "12";
+            //int y = x; //compile time checking
+
+            dynamic d = "hello";
+            int res = d; //runtime checking
+
+            Console.WriteLine(res);
+
+        
+        }
+
+    }
+
+
+
+
+//Dynamic
+
+namespace MYAPPONE
+{
+    class sample
+    {
+        public static void display(dynamic d1,dynamic d2)
+        {
+            Console.WriteLine(d1+d2);
+        }
+    }
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            sample.display(10, 20);
+            sample.display(10, 20.5);
+            sample.display("c#", "2.0");
+            sample.display("ASP", ".NET");
+        }
+
+    }
+
+
+}
+
+
+
+
+
+//Anonymus Method
+
+namespace MYAPPONE
+{
+    delegate void DelegateOne();
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            DelegateOne Dobj = delegate
+            {
+                Console.WriteLine("this anonymus method");
+            };
+
+            Dobj(); //calling anonymus method
+        }
+
+    }
+
+
+}
+
+
+//Anonymus Method with parameter
+
+namespace MYAPPONE
+{
+    delegate void DelegateOne(int n);
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            DelegateOne Dobj = delegate(int n)
+            {
+                Console.WriteLine("this anonymus method "+n);
+            };
+
+            Dobj(50); //calling anonymus method
+        }
+
+    }
+
+
+}
+
+
+
+
+
+//Anonymus Method with parameter and return type
+
+namespace MYAPPONE
+{
+    delegate int DelegateOne(int n);
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            DelegateOne Dobj = delegate(int n)
+            {
+                Console.WriteLine("this anonymus method "+n);
+                return (n * n);
+            };
+
+           Console.WriteLine( Dobj(50)); //calling anonymus method
+        }
+
+    }
+
+
+}
+
+
+//Extension Method
+
+namespace MYAPPONE
+{
+    static class demo
+    {
+        public static int changetoNumber(this string str)
+        {
+            return int.Parse(str);
+        }
+    }
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            string data = "12345";
+            int result = data.changetoNumber();
+        }
+
+    }
+
+
+}
+
+
+
+
+//Extension Method
+
+namespace MYAPPONE
+{
+    static class sample
+    {
+        public static void method3(this demo obj)
+        {
+            Console.WriteLine("HTML,CSS and JQuery");
+        }
+        public static void method4(this demo obj)
+        {
+            Console.WriteLine("Angular and React");
+        }
+
+    }
+    class demo
+    {
+        public void method1()
+        {
+            Console.WriteLine("C#, ASP, .NET AND SQL");
+        }
+
+        public void method2()
+        {
+            Console.WriteLine("PHP AND SQL");
+        }
+    }
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            demo obj =new demo();   
+            obj.method1();
+            obj.method2();
+            obj.method3();
+            obj.method4();
+        }
+
+    }
+
+
+}
+
+
+
+using ClassLibrary1;
+
+//Adding  Library
+
+namespace MYAPPONE
+{
+   
+   
+    class Program
+    {
+
+        static void Main(String[] args)
+        {
+            Class1 obj = new Class1();
+            Console.WriteLine(obj.calculate(10.2, 15.4));
+            Console.WriteLine(obj.compute(12, 14));
+            Console.WriteLine(obj.combine("Emmalu", "Joseph", "Pralady"));
+        }
+
+    }
+
+
+}
+
+
+
+//Library
+namespace ClassLibrary1
+{
+    public class Class1
+    {
+        public double calculate(double x,double y)
+        {
+            return(Math.PI*x*x*y);
+        }
+
+        public double compute(int l, int m)
+        {
+            return (l*m);
+        }
+
+        public string combine(string s1, string s2,string s3)
+        {
+            return (s1+s2+s3);
+        }
+    }
+}
+
+
+
+//single threaded code
+
+using System;
+using System.Threading;
+
+namespace MYAPPONE
+{
+    class Demo
+    {
+        public static void function1()
+        {
+            for(int i=0;i<5;i++)
+            {
+                Console.WriteLine("this is thread="+i);
+            }
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Thread th1 = new Thread(new ThreadStart(Demo.function1));
+            th1.Start();
+        }
+    }
+}
+
+
+
+//multiple threaded code
+using System;
+using System.Threading;
+
+
+namespace MYAPPONE
+{
+    class Demo
+    {
+        public static void function1()
+        {
+            for(int i=0;i<5;i++)
+            {
+                Console.WriteLine("this is thread="+i);
+                Thread.Sleep(2500);
+            }
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Thread th1 = new Thread(new ThreadStart(Demo.function1));
+            th1.Start();
+
+            Thread th2 = new Thread(new ThreadStart(Demo.function1));
+            th2.Start();
+
+            Thread th3 = new Thread(new ThreadStart(Demo.function1));
+            th3.Start();
+        }
+    }
+}
+
+
+
+//Thread Pool
+using System;
+using System.Threading;
+
+namespace MYAPPONE
+{
+    class Demo
+    {
+        public static void function1(object obj)
+        {
+            Console.WriteLine("thread " + obj + "start");
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("this is thread=" + i);
+                //Thread.Sleep(1000);
+            }
+            Console.WriteLine("thread " + obj + "end");
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+          //  Demo obj = new Demo();
+
+            for (int task = 1;task<10;task++)
+            {
+                ThreadPool.QueueUserWorkItem(new WaitCallback(Demo.function1), task);
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
+
+
+
+//synchronous programming
+
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace MYAPPONE
+{
+    class Demo
+    {
+        public static void print()
+        {
+            Console.WriteLine("hello");
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            Console.WriteLine("enter a no");
+            a = int.Parse(Console.ReadLine());
+            int res = a * a;
+            Console.WriteLine("square="+res);
+            Demo.print();
+        }
+    }
+}
+
+
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace MYAPPONE
+{
+    class Demo
+    {
+        public static void print()
+        {
+            Console.WriteLine("hello");
+            Thread.Sleep(4000);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("start");
+            Demo.print(); 
+            Console.WriteLine("end");
+        }
+    }
+}
+
+
+
+//Asynchonous programming
+
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace MYAPPONE
+{
+    class Demo
+    {
+        public static void print()
+        {
+            Console.WriteLine("hello");
+            Thread.Sleep(4000);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("start");
+            Task task1 = new Task(Demo.print);
+            task1.Start();
+
+           // Task task1 = Task.Factory.StartNew(Demo.print);
+
+            Task task1 = Task.Run(() => { Demo.print(); }); //lamda expression 
+            Console.WriteLine("end");
+
+            Console.ReadKey();
+        }
+    }
+}
+
+
+
+
+//async and await 
+
+
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace MYAPPONE
+{
+    class Demo
+    {
+        public async static void print1()
+        {
+            Console.WriteLine("Process1");
+            await Task.Delay(1500);
+            Console.WriteLine("process1 completed");
+        }
+
+        public static void print2()
+        {
+            Console.WriteLine("Process2");
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Demo.print1();
+            Demo.print2();
+            Console.ReadKey();
+        }
+    }
+}
+
+
+
+//Event Handling and delegate
+
+
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace MYAPPONE
+{
+    public class Sample
+    {
+        public delegate void even_delegate();
+        public delegate void odd_delegate();
+        public event even_delegate event_even;
+        public event odd_delegate event_odd;
+
+        public void addnos()
+        {
+            int a,b;
+            Console.WriteLine("Enter 2 nos");
+            a= int.Parse(Console.ReadLine());
+            b= int.Parse(Console.ReadLine());
+            int res = a + b;
+            if (res % 2 == 0)
+                event_even();
+            else
+                event_odd();
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Sample obj = new Sample();
+            obj.event_even += new Sample.even_delegate(msg1);
+            obj.addnos();
+
+            obj.event_odd += new Sample.odd_delegate(msg2);
+            obj.addnos();
+        }
+
+        public static void msg1()
+        {
+            Console.WriteLine("it is even no");
+        }
+
+        public static void msg2()
+        {
+            Console.WriteLine("it is odd no");
+        }
+    }
+}
+
+
+
+
+//Dependancy Injection
+
+
+using System;
+
+namespace MYAPPONE
+{
+    class Sample  //developer
+    {
+       public void add()
+        {
+            Console.WriteLine("addition");
+        }
+
+        public void sub()
+        {
+            Console.WriteLine("difference");
+        }
+
+        public void multiply()
+        {
+            Console.WriteLine("multiply");
+        }
+
+        public void square()
+        {
+            Console.WriteLine("Square");
+        }
+    }
+    class DependencyInj //client
+    {
+        Sample obj = new Sample();
+        public void calculate()
+        {
+            obj.add();
+            obj.sub();
+            obj.multiply();
+            //obj.square(); //access is given to only first three methods
+
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            DependencyInj dobj= new DependencyInj();
+            dobj.calculate();
+        }
+
+    }
+}
+
+
+
+//Dependancy Injection loosely coupled
+
+using System;
+
+namespace MYAPPONE
+{
+    interface Icalculator
+    {
+        void compute();
+    }
+    class Sample1 : Icalculator  //developer
+    {
+        public void compute()
+        {
+            Console.WriteLine("addition");
+        }
+    }
+    class Sample2 : Icalculator  
+    {
+        public void compute()
+        {
+            Console.WriteLine("difference");
+        }
+    }
+    class Sample3 : Icalculator
+    {
+        public void compute()
+        {
+            Console.WriteLine("Square and cube");
+        }
+    }
+    
+
+    class DependencyInj //client
+    {
+        Icalculator iobj=null;
+
+        public DependencyInj(Icalculator obj)
+        {
+            iobj=obj;
+        }
+        public void calculate()
+        {
+            iobj.compute();
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            DependencyInj obj1= new DependencyInj(new Sample1());
+            obj1.calculate();
+
+            DependencyInj obj2 = new DependencyInj(new Sample2());
+            obj2.calculate();
+
+            DependencyInj obj3 = new DependencyInj(new Sample3());
+            obj3.calculate();
+        }
+
+    }
+}
+

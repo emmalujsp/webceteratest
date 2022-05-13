@@ -1,0 +1,7 @@
+GIT
+-------------
+->open source web based toll/interface
+->code hosting platform
+->"SCM" source code management tool
+->supports teeams to work-together to build and modify code
+->tracking code changes
